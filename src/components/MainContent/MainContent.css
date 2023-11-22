@@ -1,0 +1,24 @@
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  padding: 16px;
+  grid-auto-flow: dense;
+}
+
+.widget {
+  background: #FFF;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* 공통 위젯 스타일 */
+}
+
+/* 각 위젯별로 필요한 경우 추가 스타일 지정 */
+.attendance-management { /* 스타일 */ }
+.electronic-approval { /* 스타일 */ }
+.calendar { /* 스타일 */ }
+.weather { /* 스타일 */ }
+.bulletin-board { /* 스타일 */ }
+.mailbox { /* 스타일 */ }

@@ -1,0 +1,59 @@
+.login-page {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: #A67C4F; /* 배경색은 이미지에 맞게 조정하세요 */
+}
+
+.login-container {
+  display: grid;
+  gap: 1rem;
+  background: #FFF; /* 배경색은 필요에 따라 조정 */
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-logo {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.login-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+input[type="text"],
+input[type="password"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* 폼 요소들을 전체 너비로 설정 */
+}
+
+.login-button {
+  padding: 0.5rem;
+  background-color: #4CAF50; /* 버튼 색상은 필요에 따라 조정 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #45a049;
+}
+
+.password-reset {
+  background: none;
+  border: none;
+  color: #4CAF50;
+  cursor: pointer;
+}
+
+.password-reset:hover {
+  text-decoration: underline;
+}
