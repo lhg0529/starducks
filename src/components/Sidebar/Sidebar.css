@@ -20,6 +20,15 @@
   text-align: center; /* 메뉴 텍스트를 중앙에 배치 */
 }
 
+.sidebar-menu a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: white; /* 텍스트 색상을 흰색으로 변경 */
+}
+
+.sidebar-menu a:hover {
+  cursor: pointer; /* 마우스 오버 시 커서를 포인터로 변경 */
+}
+
 .sidebar-menu li {
   margin-bottom: 0.5rem;
 }
