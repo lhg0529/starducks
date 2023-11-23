@@ -1,0 +1,48 @@
+/* Sidebar.css */
+.sidebar {
+  width: 20%;
+  background: #6b4d27;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar-logo {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-menu li ul {
+  list-style-type: none;
+  padding-left: 20px;
+  display: none;
+}
+
+.sidebar-menu li:hover ul {
+  display: block;
+}
+
+.logout-button {
+  margin-top: auto;
+  background: #036635;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.sidebar-footer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}

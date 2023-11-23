@@ -2,58 +2,65 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  background-color: #A67C4F; /* 배경색은 이미지에 맞게 조정하세요 */
+  background-color: #6b4d27;
 }
 
 .login-container {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
-  background: #FFF; /* 배경색은 필요에 따라 조정 */
+  width: 100%;
+  max-width: 320px;
   padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 
 .login-logo {
-  max-width: 100%;
+  width: 80%;
   height: auto;
   margin-bottom: 1rem;
 }
 
-.login-form {
-  display: grid;
-  gap: 0.5rem;
-}
-
-input[type="text"],
-input[type="password"] {
-  padding: 0.5rem;
+.input-field,
+.login-button {
+  box-sizing: border-box; /* padding과 border를 너비에 포함 */
+  width: 100%;
+  padding: 0.5rem; /* 상하 패딩 추가 */
   border: 1px solid #ccc;
   border-radius: 4px;
-  width: 100%; /* 폼 요소들을 전체 너비로 설정 */
+  text-align: center;
+}
+
+.input-field::placeholder {
+  text-align: center;
 }
 
 .login-button {
-  padding: 0.5rem;
-  background-color: #4CAF50; /* 버튼 색상은 필요에 따라 조정 */
+  background-color: #036635;
   color: white;
-  border: none;
-  border-radius: 4px;
+  border: 1px solid #036635; /* 테두리 색상을 버튼 배경색과 동일하게 설정 */
   cursor: pointer;
+  font-size: 1.2em; /* 글씨 크기 증가 */
+  font-weight: bold; /* 글씨 굵게 */
+  border-radius: 4px;
 }
 
 .login-button:hover {
-  background-color: #45a049;
+  background-color: #024423;
 }
 
-.password-reset {
-  background: none;
-  border: none;
-  color: #4CAF50;
+.password-find {
+  color: #fbe9c5;
   cursor: pointer;
+  text-align: center;
+  margin-top: 1rem;
 }
 
-.password-reset:hover {
-  text-decoration: underline;
+.password-find a {
+  color: #fbe9c5; /* 원래 텍스트 색상으로 설정 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+.password-find a:hover {
+  cursor: pointer; 
 }
