@@ -12,7 +12,7 @@ const Sidebar = ({ onLogout }) => {
 
   return (
     <nav className="sidebar">
-      <img src="/logo.png" alt="Starducks Logo" className="sidebar-logo" />
+      <img src="/Starducks_Logo.png" alt="Starducks Logo" className="sidebar-logo" />
       <ul className="sidebar-menu">
         <li>
           <Link to="/mypage">마이페이지</Link>
@@ -33,7 +33,7 @@ const Sidebar = ({ onLogout }) => {
       </ul>
       <button onClick={handleLogout} className="logout-button">로그아웃</button>
       <div className="sidebar-footer">
-        2021 STARDUCKS ERP
+        ©2023 STARDUCKS ERP
       </div>
     </nav>
   );
