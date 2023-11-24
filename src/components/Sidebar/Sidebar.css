@@ -1,63 +1,95 @@
 .sidebar {
-  width: 13%;
-  background: #6b4d27;
-  color: white;
+  width: 250px; /* 사이드바 너비 설정 */
+  background: #6b4d27; /* 사이드바 배경색 */
+  color: white; /* 글자 기본색 */
   padding: 1rem;
-  display: grid;
-  grid-template-rows: auto 1fr auto auto; /* 로고, 메뉴, 로그아웃 버튼 및 푸터를 위한 행 크기 설정 */
-  gap: 1rem;
-  height: 100vh;
+  display: flex;
+  flex-direction: column; /* 요소들을 세로로 정렬 */
+  gap: 1rem; /* 요소들 사이 간격 */
+  height: 100vh; /* 전체 높이 */
+  box-sizing: border-box; /* border-box 모델 적용 */
 }
 
 .sidebar-logo {
-  width: 100%;
-  margin: 0 auto; /* 로고를 중앙에 배치 */
+  width: 100%; /* 로고 너비 */
+  margin: 0 auto; /* 상하 마진 없이 좌우 중앙 정렬 */
 }
 
 .sidebar-menu {
-  list-style-type: none;
-  padding: 0;
-  text-align: center; /* 메뉴 텍스트를 중앙에 배치 */
-}
-
-.sidebar-menu a {
-  text-decoration: none; /* 밑줄 제거 */
-  color: white; /* 텍스트 색상을 흰색으로 변경 */
-}
-
-.sidebar-menu a:hover {
-  cursor: pointer; /* 마우스 오버 시 커서를 포인터로 변경 */
+  list-style-type: none; /* 목록 스타일 제거 */
+  padding: 0; /* 패딩 제거 */
+  margin: 0; /* 마진 제거 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
 }
 
 .sidebar-menu li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem; /* 하단 마진 설정 */
+  position: relative; /* 하위 메뉴 위치 설정을 위해 relative 설정 */
 }
 
+.sidebar-menu a {
+  text-decoration: none; /* 링크 밑줄 제거 */
+  color: white; /* 링크 색상 */
+  display: block; /* 링크를 블록 요소로 설정 */
+  padding: 10px 20px; /* 패딩 조정 */
+}
+
+/* 하위 메뉴가 기본적으로 보이지 않게 설정 */
 .sidebar-menu li ul {
-  list-style-type: none;
-  padding-left: 20px;
-  display: none;
+  display: none; /* 하위 메뉴를 숨김 */
+  position: absolute; /* 상위 li에 대해 절대 위치 */
+  left: 100%; /* 왼쪽 경계에서 100% 떨어진 위치에 배치 */
+  top: 0; /* 상단 경계와 동일하게 설정 */
+  min-width: 150px; /* 최소 너비 설정 */
+  margin: 0; /* 마진 제거 */
+  padding: 0; /* 패딩 제거 */
+  border-radius: 0 10px 10px 0; /* 오른쪽 모서리 둥글게 */
+  background: white; /* 배경색 흰색으로 설정 */
+  color: black; /* 글자색 검정색으로 설정 */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* 그림자 효과 추가 */
+  z-index: 100; /* z-index를 통해 다른 요소 위에 표시 */
 }
 
-.sidebar-menu li:hover ul {
-  display: block;
+/* 클릭된 메뉴 항목에 대한 스타일 */
+.sidebar-menu li.clicked > a {
+  background-color: #036635; /* 배경색 초록색으로 변경 */
+  color: white; /* 글자색 하얀색으로 변경 */
+  border-radius: 10px 0 0 10px; /* 왼쪽 모서리 둥글게 설정 */
+}
+
+/* 클릭된 상위 메뉴 항목의 하위 메뉴를 표시 */
+.sidebar-menu li.clicked ul {
+  display: block; /* 하위 메뉴를 표시 */
+}
+
+/* 하위 메뉴 항목 스타일 */
+.sidebar-menu li ul li {
+  padding: 10px 20px; /* 패딩 조정 */
+  background: white; /* 배경색 흰색으로 설정 */
+  color: black; /* 글자색 검정색으로 설정 */
+  border-bottom: 1px solid #ddd; /* 하단에 경계선 추가 */
+}
+
+/* 하위 메뉴 항목에 마우스를 올렸을 때의 스타일 */
+.sidebar-menu li ul li:hover {
+  background-color: #036635; /* 배경색 초록색으로 변경 */
+  color: white; /* 글자색 하얀색으로 변경 */
 }
 
 .logout-button {
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6rem;
-  background: #036635;
-  color: white;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-  display: block; /* 버튼을 블록 요소로 만들어 가운데 정렬 가능하게 함 */
+  background: #036635; /* 배경색 초록색으로 변경 */
+  color: white; /* 글자색 하얀색으로 변경 */
+  border: none; /* 테두리 제거 */
+  padding: 0.5rem; /* 패딩 설정 */
+  cursor: pointer; /* 커서 포인터로 변경 */
+  margin-top: auto; /* 위의 마진 자동으로 설정하여 하단에 정렬 */
+  width: calc(100% - 2rem); /* 계산된 너비 설정 */
+  border-radius: 10px; /* 버튼 모서리 둥글게 설정 */
 }
 
 .sidebar-footer {
-  font-size: 0.8rem;
-  text-align: center; /* 푸터 텍스트를 중앙에 배치 */
-  margin-bottom: 4rem;
+  font-size: 0.8rem; /* 폰트 크기 설정 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  margin-top: auto; /* 위의 마진 자동으로 설정하여 하단에 정렬 */
+  padding: 0.5rem 0; /* 패딩 설정 */
 }
